@@ -10,4 +10,7 @@ const linearSearch = (arr, value) => {
 const result = linearSearch([22, 4, 5, 6, 5, 3], 15);
 console.log(result);
 
-const binarySearch = () => {};
+const binarySearch = (arr, value) => {
+  let start;
+  let end;
+};
