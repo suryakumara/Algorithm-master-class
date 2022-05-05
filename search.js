@@ -12,6 +12,7 @@ const result = linearSearch([22, 4, 5, 6, 5, 3], 15);
 // console.log(result);
 
 // binary search must be sort at first
+// time complexity => 2squareN => Log(n) => it mean really good
 const binarySearch = (arr, target) => {
   let start = 0;
   let end = arr.length - 1;
@@ -33,3 +34,25 @@ const binarySearch = (arr, target) => {
 
 const result_binary = binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 50);
 console.log(result_binary);
+
+// Naive String Search
+// - loop over the longer string
+// - loop over the shorter string
+
+function naiveSearch(long, short) {
+  let count = 0;
+  for (let i = 0; i < long.length; i++) {
+    for (let j = 0; j < short.length; j++) {
+      if (short[j] !== long[i + j]) {
+        break;
+      }
+      if (j === short.length - 1) {
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+const resultNaiveSarch = naiveSearch("lorie loled", "loled");
+console.log(resultNaiveSarch);
